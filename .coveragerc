@@ -1,0 +1,15 @@
+[paths]
+source =
+   toil_cnvkit
+   */site-packages/toil_cnvkit
+
+[run]
+include =
+    toil_cnvkit/*
+
+source =
+    toil_cnvkit
+    tests
+
+omit =
+    *toil_cnvkit/__main__.py

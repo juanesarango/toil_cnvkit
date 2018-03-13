@@ -1,0 +1,43 @@
+{
+    "classifiers": [
+        "Intended Audience :: Developers",
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: MIT License",
+        "Natural Language :: English",
+        "Operating System :: Unix",
+        "Operating System :: POSIX",
+        "Programming Language :: Python :: 2 :: Only",
+        "Topic :: Utilities"
+    ],
+    "entry_points": {
+        "console_scripts": [
+            "toil_cnvkit=toil_cnvkit.cli:main"
+        ]
+    },
+    "setup_requires": [
+        "pytest-runner==2.11.1"
+    ],
+    "install_requires": [
+        "Click>=6.7",
+        "docker==2.5.1",
+        "toil_container>=0.2.0"
+    ],
+    "extras_require": {
+        "test": [
+            "coverage>=4.4.2",
+            "pydocstyle>=2.1.1",
+            "pytest-cov>=2.5.1",
+            "pytest-env==0.6.2",
+            "pylint>=1.8.1",
+            "tox==2.9.1"
+        ]
+    },
+    "author": "Juan S. Medina, Juan E. Arango",
+    "keywords": [],
+    "license": "BSD",
+    "name": "toil_cnvkit",
+    "test_suite": "tests",
+    "long_description": "📘 learn more on `GitHub <https://github.com/leukgen/toil_cnvkit>`_!",
+    "description": "🍋 CNVkit implementation with Toil.",
+    "url": "https://github.com/leukgen/toil_cnvkit"
+}
