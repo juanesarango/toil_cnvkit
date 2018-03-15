@@ -11,4 +11,3 @@ def test_main():
     """Sample test for main command."""
     with pytest.raises(SystemExit) as _:
         cli.main()
-

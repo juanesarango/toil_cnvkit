@@ -1,10 +1,14 @@
 """toil_cnvkit utils tests."""
 
+from os.path import abspath
+from os.path import dirname
 from os.path import join
 import os
 import tarfile
 
 from toil_cnvkit import utils
+
+ROOT = abspath(dirname(__file__))
 
 
 def test_force_symlink(tmpdir):
@@ -99,3 +103,9 @@ def test_tar_dir(tmpdir):
         i = i.replace(source_dir, join(dst_dir, "source_dir"))
         with open(i, "r") as f:
             assert j in f.read()
+
+
+def test_sample_get_name(tmpdir):
+    tumor_file = join(ROOT, 'data', 'tumor', 'tumor.bam')
+    tumor_name = utils.get_sample_name(tumor_file)
+    assert tumor_name == 'tumor'

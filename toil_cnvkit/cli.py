@@ -21,6 +21,3 @@ from toil_cnvkit import commands
 def main():
     """toil_cnvkit main command."""
     commands.main()
-
-if __name__ == "__main__":
-    main()  # pylint: disable=no-value-for-parameter

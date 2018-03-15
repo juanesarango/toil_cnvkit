@@ -1,7 +1,5 @@
 language: python
 
-sudo: false
-
 cache:
   pip: true
 
@@ -11,21 +9,8 @@ python:
 services:
   - docker
 
-install:
-  - pip install -U tox-travis codecov
-
-script: tox
+script:
+  - bash run-tests.sh
 
 after_success:
-  - codecov --disable search
-
-deploy:
-  provider: pypi
-  distributions: sdist bdist_wheel
-  user: leukgen
-  password: <TO REPLACE THIS RUN `travis encrypt --add deploy.password`>
-  on:
-    tags: true
-    repo: leukgen/toil_cnvkit
-    python: 2.7
-    branch: master
+  - codecov
