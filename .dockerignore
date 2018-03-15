@@ -7,7 +7,6 @@
 *.smig
 *.img
 *.pyc
-__pycache__
 node_modules/
 venv
 
@@ -23,7 +22,9 @@ venv
 .vscode/
 
 # Byte-compiled / optimized / DLL files
-__pycache__/
+__pycache__
+*/__pycache__
+**/__pycache__
 *.py[cod]
 *$py.class
 
@@ -32,7 +33,6 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
 develop-eggs/
 dist/
 downloads/
@@ -69,6 +69,8 @@ nosetests.xml
 coverage.xml
 *.cover
 .hypothesis/
+.pytest_cache/
+*/.pytest_cache/
 
 # Translations
 *.mo

@@ -18,8 +18,10 @@
         "pytest-runner==2.11.1"
     ],
     "install_requires": [
+        "cnvkit==0.9.1",
         "Click>=6.7",
         "docker==2.5.1",
+        "pandas>=0.22.0",
         "toil_container>=0.2.0"
     ],
     "extras_require": {
