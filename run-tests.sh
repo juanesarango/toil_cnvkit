@@ -9,9 +9,9 @@ fi
 
 docker run --rm -it test-image --version
 docker run --rm -it --entrypoint '' \
-    -v `pwd`:/test -w /test  \
     test-image bash -c 'pip install tox && tox'
 
+    # -v `pwd`:/test -w /test  \
 # move container coverage paths to local, see .coveragerc [paths] and this comment:
 # https://github.com/pytest-dev/pytest-cov/issues/146#issuecomment-272971136
 echo "combining container coverage..."
